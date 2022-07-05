@@ -1,0 +1,101 @@
+
+1.	Contesto di riferimento e obiettivi
+
+Contesto
+
+Si vuole realizzare un sistema informativo su Web per la gestione di un catering
+Oltre agli utenti occasionali, interagiscono con il sistema: i clienti e l'amministrazione
+Un cliente pu� svolgere le seguenti operazioni:
+	�	Consultazione tipologie di buffet offerti dal catering
+	
+
+L'amministrazione pu� svolgere le seguenti operazioni:
+	�	Inserimento di una tipologia di buffet 
+	�	Inserimento di un buffet
+	�	Inserimento di un clienti nella anagrafica clienti
+
+Per ogni tipologia di buffet sono di interesse un nome, un codice, una descrizione, un costo
+	�	Ogni tipologia di buffet ha inoltre una lista di ingredienti.
+	
+Per ogni buffet � necessario riportare la data di prenotazione (con data e ora in cui � stata effettuata la prenotazione), il nome dello chef che ha cucinato
+	�	Per ogni chef � necessario gestire: nome, cognome, nazionalità
+	
+2.	Obiettivi
+
+L�obiettivo � creare un sistema informativo su Web che contempli i seguenti casi d�uso che seguono 
+
+
+3.	Casi D�Uso
+
+
+
+Caso d'uso UC1: consulta offerta:
+Attore primario: utente non registrato. Un qualunque accesso anonimo (che pu� fruire direttamente il portale senza essere necessariamente registrato) pu� accedere alle pagine 
+di consultazione per consultare sia la tipologia di buffet che il catering offre sia richiedendone i dettagli.
+
+Scenario principale di successo: 
+
+Il sistema mostra i dettagli della richiesta visualizzando la pagina.
+L'utente ripete i passi precedenti un numero indefinito di volte. 
+La stessa cosa � disponibile anche per gli chef con le stesse modalit�.
+
+ 
+
+
+Caso d'uso UC2: crea buffet (prenotazione).
+
+Attore primario: amministrazione. Si presuppone che l�utente principale sia  quello registrato con appositi permessi di �amministrazione�, registrato con un apposito ruolo su DB in grado di effettuare operazioni di creazione del dato come quello del buffet.
+
+Scenario principale di successo: 
+E� altres� necessario ovviamente loggarsi al sistema con le proprie credenziali che verranno riconosciute dal sistema come utenza di amministrazione. 
+L�amministratore (o amministrazione) crea un buffet dall�apposita voce di menu, successivamente imposta una tipologia e lo chef.
+
+ 
+
+Caso d'uso UC3: consulta proprio buffet
+Attore primario: paziente. Si presuppone che l�utente principale sia quello registrato con appositi permessi di cliente, registrato con un apposito ruolo su DB in grado di effettuare operazioni di consultazione del dato come quello del buffet.
+
+Scenario principale di successo: 
+
+Il cliente consulta l'elenco dei propri buffet, attraverso i menu.
+Il sistema mostra al cliente l'elenco dei suoi buffet
+Il cliente seleziona un proprio buffet
+Il sistema mostra il buffet nel dettaglio
+
+ 
+
+Caso d'uso UC4: inserimento tipologia di buffet.
+
+Attore primario: amministrazione. Si presuppone che l�utente principale sia quello registrato con appositi permessi di �amministrazione�, registrato con un apposito ruolo su DB in grado di effettuare operazioni di creazione del dato come quello del buffet.
+
+Scenario principale di successo: 
+
+L'amministratore inserisce una nuova tipologia di buffet indicando nome, descrizione e prezzo.
+Il sistema registra la tipologia di buffet e mostra la form per l'inserimento dei piatti.
+L'amministratore inserisce piatto(se presente) altrimenti termina l'operazione
+I punti precedenti vengono ripetuti fino a che necessario.
+
+
+
+Caso d'uso UC5: buffet effettuati da uno chef.
+
+Attore primario: amministrazione. Si presuppone che l�utente principale sia quello registrato con appositi permessi di �amministrazione�, registrato con un apposito ruolo su DB in grado di effettuare operazioni di creazione del dato come quello del �buffet.
+
+Scenario principale di successo: 
+L�amministratore selezione dall�apposito menu nome e cognome di un chef.
+Il sistema mostra all�amministratore tutti i buffet effettuati dallo chef attraverso la selezione dello stesso, con il consueto link al nome:
+Il sistema mostra i dati dello chef e in basso i buffet svolti dallo stesso.
+
+
+Caso d'uso UC9: chi siamo.
+Attore primario: utente generico
+
+Scenario principale di successo:
+
+L'utente seleziona le informazioni del catering
+Il sistema mostra la pagina con le informazioni
+
+
+
+
+
